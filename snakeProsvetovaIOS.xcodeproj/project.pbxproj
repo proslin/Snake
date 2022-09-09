@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		706A943628CB14ED00133A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A943528CB14ED00133A81 /* AppDelegate.swift */; };
-		706A943828CB14ED00133A81 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 706A943728CB14ED00133A81 /* GameScene.sks */; };
 		706A943A28CB14ED00133A81 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 706A943928CB14ED00133A81 /* Actions.sks */; };
 		706A943C28CB14ED00133A81 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A943B28CB14ED00133A81 /* GameScene.swift */; };
 		706A943E28CB14ED00133A81 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A943D28CB14ED00133A81 /* GameViewController.swift */; };
@@ -18,6 +17,10 @@
 		706A945028CB14EE00133A81 /* snakeProsvetovaIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A944F28CB14EE00133A81 /* snakeProsvetovaIOSTests.swift */; };
 		706A945A28CB14EE00133A81 /* snakeProsvetovaIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A945928CB14EE00133A81 /* snakeProsvetovaIOSUITests.swift */; };
 		706A945C28CB14EE00133A81 /* snakeProsvetovaIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A945B28CB14EE00133A81 /* snakeProsvetovaIOSUITestsLaunchTests.swift */; };
+		706A946928CB183600133A81 /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A946828CB183600133A81 /* Apple.swift */; };
+		706A946B28CB1A8700133A81 /* SnakeBodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A946A28CB1A8700133A81 /* SnakeBodyPart.swift */; };
+		706A946D28CB40B100133A81 /* SnakeHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A946C28CB40B100133A81 /* SnakeHead.swift */; };
+		706A946F28CB428500133A81 /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A946E28CB428500133A81 /* Snake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,6 @@
 /* Begin PBXFileReference section */
 		706A943228CB14ED00133A81 /* snakeProsvetovaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snakeProsvetovaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A943528CB14ED00133A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		706A943728CB14ED00133A81 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		706A943928CB14ED00133A81 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		706A943B28CB14ED00133A81 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		706A943D28CB14ED00133A81 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,10 @@
 		706A945528CB14EE00133A81 /* snakeProsvetovaIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snakeProsvetovaIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A945928CB14EE00133A81 /* snakeProsvetovaIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snakeProsvetovaIOSUITests.swift; sourceTree = "<group>"; };
 		706A945B28CB14EE00133A81 /* snakeProsvetovaIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snakeProsvetovaIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		706A946828CB183600133A81 /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
+		706A946A28CB1A8700133A81 /* SnakeBodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeBodyPart.swift; sourceTree = "<group>"; };
+		706A946C28CB40B100133A81 /* SnakeHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeHead.swift; sourceTree = "<group>"; };
+		706A946E28CB428500133A81 /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +109,16 @@
 			isa = PBXGroup;
 			children = (
 				706A943528CB14ED00133A81 /* AppDelegate.swift */,
-				706A943728CB14ED00133A81 /* GameScene.sks */,
+				706A946E28CB428500133A81 /* Snake.swift */,
 				706A943928CB14ED00133A81 /* Actions.sks */,
 				706A943B28CB14ED00133A81 /* GameScene.swift */,
 				706A943D28CB14ED00133A81 /* GameViewController.swift */,
+				706A946828CB183600133A81 /* Apple.swift */,
 				706A943F28CB14ED00133A81 /* Main.storyboard */,
 				706A944228CB14EE00133A81 /* Assets.xcassets */,
 				706A944428CB14EE00133A81 /* LaunchScreen.storyboard */,
+				706A946A28CB1A8700133A81 /* SnakeBodyPart.swift */,
+				706A946C28CB40B100133A81 /* SnakeHead.swift */,
 			);
 			path = snakeProsvetovaIOS;
 			sourceTree = "<group>";
@@ -236,7 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				706A944128CB14ED00133A81 /* Main.storyboard in Resources */,
-				706A943828CB14ED00133A81 /* GameScene.sks in Resources */,
 				706A944328CB14EE00133A81 /* Assets.xcassets in Resources */,
 				706A944628CB14EE00133A81 /* LaunchScreen.storyboard in Resources */,
 				706A943A28CB14ED00133A81 /* Actions.sks in Resources */,
@@ -264,8 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706A946D28CB40B100133A81 /* SnakeHead.swift in Sources */,
+				706A946928CB183600133A81 /* Apple.swift in Sources */,
 				706A943C28CB14ED00133A81 /* GameScene.swift in Sources */,
 				706A943E28CB14ED00133A81 /* GameViewController.swift in Sources */,
+				706A946B28CB1A8700133A81 /* SnakeBodyPart.swift in Sources */,
+				706A946F28CB428500133A81 /* Snake.swift in Sources */,
 				706A943628CB14ED00133A81 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
