@@ -21,7 +21,7 @@ class Snake: SKShapeNode {
         self.init()
         // змейканачинаетсясголовы, создадимее
         let head = SnakeHead(atPoint: point)
-        // идобавимвмассив
+        // и добавим в массив
         body.append(head)
         // исделаемеедочернимобъектом.
         addChild(head)

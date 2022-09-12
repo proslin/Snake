@@ -18,6 +18,14 @@ class SnakeBodyPart: SKShapeNode {
         // ширинарамки 5 поинтов
         lineWidth = 5// размещаемэлементвпереданнойточке
         self.position = point
+        // Создаем физическое тело
+        self.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(diameter - 4), center: CGPoint(x: 5, y:5))
+        // Можетперемещатьсявпространстве
+        self.physicsBody?.isDynamic = true
+        // Категория - змея
+        self.physicsBody?.categoryBitMask = CollisionCategories.Snake
+        // пересекается с границами экрана и яблоком
+        self.physicsBody?.contactTestBitMask = CollisionCategories.EdgeBody | CollisionCategories.Apple
         
     }
     required init?(coder aDecoder: NSCoder) {
