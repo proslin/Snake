@@ -91,15 +91,24 @@ class GameScene: SKScene {
     
     //вызываетсяприпрекращениинажатиянаэкран
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // повторяемвсетожесамоедлядействия, когдапалецотрываетсяотэкрана
+        // повторяем все тоже самое для действия, когда палец отрывается от экрана
         for touch in touches {
             let touchLocation = touch.location(in: self)
             guard let touchedNode = self.atPoint(touchLocation) as? SKShapeNode, touchedNode.name == "counterClockwiseButton" || touchedNode.name == "clockwiseButton"else {return }
-            // ноделаемцветсновасерым
+            // но делаем цвет снова серым
             touchedNode.fillColor = UIColor.gray
         }
     }
-    // вызываетсяприобрывенажатиянаэкран, например, еслителефонприметзвонокисвернетприложение
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let touchLocation = touch.location(in: self)
+            guard let touchedNode = self.atPoint(touchLocation) as? SKShapeNode, touchedNode.name == "counterClockwiseButton" || touchedNode.name == "clockwiseButton"else {return }
+            // но делаем цвет снова серым
+            touchedNode.fillColor = UIColor.gray
+        }
+    }
+    // вызывается при обрыве нажатия на экран, например, если телефон примет звонок и свернет приложение
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
@@ -141,9 +150,6 @@ extension GameScene: SKPhysicsContactDelegate {
             snake = Snake(atPoint: CGPoint(x: view!.scene!.frame.midX, y: view!.scene!.frame.midY))
             self.addChild(snake!)
             
-           print("Boom")
-            //break
-            // соприкосновениесостенойбудетдомашнимзаданием
             default:
             break
             
