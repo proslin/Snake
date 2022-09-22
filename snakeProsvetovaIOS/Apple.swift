@@ -5,17 +5,19 @@
 //  Created by Lina Prosvetova on 09.09.2022.
 //
 import UIKit
-import SpriteKit// Яблоко
-class Apple: SKShapeNode { //определяем, каконобудетотрисовываться
+import SpriteKit
+// Яблоко
+class Apple: SKShapeNode {
+    //определяем, как оно будет отрисовываться
     convenience init(position: CGPoint) {
         self.init()
-        // рисуемкруг
+        // рисуем круг
         path = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 10, height: 10)).cgPath
-        // заливаемкрасным
+        // заливаем красным
         fillColor = UIColor.red
-        // рамкатожекрасная
+        // рамка тоже красная
         strokeColor = UIColor.red
-        // ширинарамки 5 поинтов
+        // ширина рамки 5 поинтов
         lineWidth = 5
         self.position = position
         //Добавляем физическое тело, совпадающее с изображениемяблока

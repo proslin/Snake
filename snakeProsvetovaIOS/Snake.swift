@@ -29,7 +29,7 @@ class Snake: SKShapeNode {
     }
     
     // методдобавляетещеодинсегменттела
-    func addBodyPart(){
+    func addBodyPart() {
         // инстанцируемсегмент
         let newBodyPart = SnakeBodyPart(atPoint: CGPoint(x: body[0].position.x, y: body[0].position.y))
         // добавляемеговмассив
@@ -39,7 +39,7 @@ class Snake: SKShapeNode {
     }
     
     //перемещаемзмейку
-    func move(){
+    func move() {
         // еслиузмейкинетголовы, ничегонеперемещаем
         guard !body.isEmpty else { return }
         // перемещаемголову
@@ -53,35 +53,36 @@ class Snake: SKShapeNode {
             
         }
     }
-        
-        //перемещаемголову
-        func moveHead(_ head: SnakeBodyPart){
-            // рассчитываемсмещениеточки
-            let dx = CGFloat(moveSpeed) * sin(angle);
-            let dy = CGFloat(moveSpeed) * cos(angle);
-            // смещаемточкуназначенияголовы
-            let nextPosition = CGPoint(x: head.position.x + dx, y: head.position.y + dy)
-            // действиеперемещенияголовы
-            let moveAction = SKAction.move(to: nextPosition, duration: 1.0)
-            // запускдействияперемещения
-            head.run(moveAction)
-            
-        }
-        // перемещаемсегментзмеи
-        func moveBodyPart(_ p: SnakeBodyPart, c: SnakeBodyPart){
-            // перемещаемтекущийэлементкпредыдущему
-            let moveAction = SKAction.move(to: CGPoint(x: p.position.x, y: p.position.y), duration: 0.1 )
-            // запускдействияперемещения
-            c.run(moveAction)
-        }
-        
-        //поворотпочасовойстрелке
-        func moveClockwise(){
-            // смещаемуголна 45 градусов
-            angle += CGFloat(Double.pi/2)
-        }
-        // поворотпротивчасовойстрелки
-        func moveCounterClockwise(){
-            angle -= CGFloat(Double.pi/2)
-        }
+    
+    //перемещаемголову
+    func moveHead(_ head: SnakeBodyPart) {
+        // рассчитываемсмещениеточки
+        let dx = CGFloat(moveSpeed) * sin(angle);
+        let dy = CGFloat(moveSpeed) * cos(angle);
+        // смещаемточкуназначенияголовы
+        let nextPosition = CGPoint(x: head.position.x + dx, y: head.position.y + dy)
+        // действиеперемещенияголовы
+        let moveAction = SKAction.move(to: nextPosition, duration: 1.0)
+        // запускдействияперемещения
+        head.run(moveAction)
+    }
+    
+    // перемещаемсегментзмеи
+    func moveBodyPart(_ p: SnakeBodyPart, c: SnakeBodyPart) {
+        // перемещаемтекущийэлементкпредыдущему
+        let moveAction = SKAction.move(to: CGPoint(x: p.position.x, y: p.position.y), duration: 0.1 )
+        // запускдействияперемещения
+        c.run(moveAction)
+    }
+    
+    //поворотпочасовойстрелке
+    func moveClockwise() {
+        // смещаемуголна 45 градусов
+        angle += CGFloat(Double.pi/2)
+    }
+    
+    // поворотпротивчасовойстрелки
+    func moveCounterClockwise() {
+        angle -= CGFloat(Double.pi/2)
+    }
 }
